@@ -23,11 +23,12 @@ class ChallengeServiceProvider extends ServiceProvider
         ]);
         
         $this->publishes([
+            realpath(__DIR__.'/../../database/migrations') => database_path('/migrations'),
             realpath(__DIR__.'/../../resources/assets') => resource_path('/assets'),
             realpath(__DIR__.'/../../storage') => storage_path(),
             realpath(__DIR__.'/../../webpack.mix.js') => base_path('/webpack.mix.js'),
             realpath(__DIR__.'/../../package.json') => base_path('/package.json'),
-        ], 'install');
+        ]);
         
         $this->registerHelpers();
         //$this->registerPolicies();
