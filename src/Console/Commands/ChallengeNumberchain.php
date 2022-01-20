@@ -45,8 +45,6 @@ class ChallengeNumberchain extends Command
         parent::__construct();
         
         $this->squareOfDigits = $squareOfDigits;
-        
-        $this->start = $this->squareOfDigits->nextStartingNumber();
     }
 
     /**
@@ -54,6 +52,7 @@ class ChallengeNumberchain extends Command
      */
     public function handle()
     {
+        $this->start = $this->squareOfDigits->nextStartingNumber();
         if ($this->option('start')) $this->start = (int) $this->option('start'); 
         if ($this->option('end')) $this->end = (int) $this->option('end');
         

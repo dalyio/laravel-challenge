@@ -6,7 +6,9 @@
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', 'AppController@index');
+Route::get('/', function() {
+    return redirect('/numberchain/data');
+});
 
 Route::get('/numberchain/solution', 'App\NumberchainController@solution');
 Route::get('/numberchain/data', 'App\NumberchainController@data');

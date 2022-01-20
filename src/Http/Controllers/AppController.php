@@ -22,6 +22,7 @@ class AppController extends Controller
      */
     public function index(Request $request)
     {
+        dd('weo');
         return view('app.index');
     }
 }
