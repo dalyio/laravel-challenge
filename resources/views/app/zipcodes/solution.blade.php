@@ -9,7 +9,7 @@
                 <span class="font-xl">{{ __('Haversine Formula') }}</span>
             </div>
             <div>
-                <blockquote>
+                <blockquote class="codeblock">
                   <pre><code>{{ $codeblock('haversine-formula') }}</code></pre>
                 </blockquote>  
             </div>
