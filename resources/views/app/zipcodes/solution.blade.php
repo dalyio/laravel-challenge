@@ -10,8 +10,8 @@
             </div>
             <div>
                 <blockquote class="codeblock">
-                  <pre><code>{{ $codeblock('haversine-formula') }}</code></pre>
-                </blockquote>  
+                    <pre><code>{{ $codeblock('haversine-formula') }}</code></pre>
+                </blockquote>
             </div>
         </div>
     </div>

@@ -20,7 +20,8 @@ class CodeblockStub
     public function get($key)
     {
         $filepath = $this->filepath($key);
-        return ($filepath) ? File::get($this->filepath($key)) : null;
+        $snippet = File::get($filepath);
+        if ($snippet) highlight_string($snippet);
     }
     
     protected function filepath($key)
