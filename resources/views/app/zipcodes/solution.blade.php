@@ -250,7 +250,7 @@
                                 <td v-if="distance.success"><span v-text="distance.zipcode_from.zipcode"></span></td>
                                 <td v-if="distance.success"><span v-text="distance.zipcode_to.zipcode"></span></td>
                                 <td v-if="distance.success"><span v-text="formatDistance(distance)"></span></td>
-                                <td v-if="!distance.success" colspan="3"><span class="text-align-center"></span></td>
+                                <td v-if="!distance.success" colspan="3"><center><span v-text="distance.message"></span></center></td>
                             </tr>
                         </tbody>
                     </table>       
