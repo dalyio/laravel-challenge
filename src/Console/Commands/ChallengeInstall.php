@@ -35,9 +35,9 @@ class ChallengeInstall extends Command
      */
     public function handle()
     {
+        $this->optimize();
         $this->publish();
         $this->database();
-        $this->optimize();
         $this->webpack();
         
         $this->info('The code challenge working solution has been installed');
@@ -82,8 +82,10 @@ class ChallengeInstall extends Command
     {
         $this->info('Migrating the database...');
         
+        Artisan::call('migrate');
+        
         Artisan::call('migrate', [
-            '--path' => 'packages/dalyio/challenge/database/migrations'
+            '--path' => realpath(__DIR__.'/../../database/migrations')
         ]);
     }
     

@@ -1,0 +1,20 @@
+
+<?php
+
+/**
+ * @param Dalyio\Challenge\Models\Geo\Zipcode $zipcodeFrom
+ * @param Dalyio\Challenge\Models\Geo\Zipcode $zipcodeTo
+ * @param string $unit
+ * @return string
+ */
+public function distinceBetweenZipcodes($zipcodeFrom, $zipcodeTo, $unit = 'km')
+{
+    $changeLatitude = deg2rad($zipcodeFrom->latitude()) - deg2rad($zipcodeTo->latitude());
+    $changeLongitude = deg2rad($zipcodeFrom->longitude()) - deg2rad($zipcodeTo->longitude());
+
+    $angle = (sin($changeLatitude / 2) * sin($changeLatitude / 2)) + 
+        (cos(deg2rad($zipcodeFrom->latitude())) * cos(deg2rad($zipcodeTo->latitude())) * sin($changeLongitude / 2) * sin($changeLongitude / 2));
+    $distance = (2 * asin(sqrt($angle)) * $this->earthRadius[$unit]);
+
+    return $distance;
+}

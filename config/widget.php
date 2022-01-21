@@ -39,7 +39,7 @@ return [
                 'label' => 'Indexed Through',
                 'priority' => 100,
                 'style' => [
-                    'color' => '#ff0000',
+                    'color' => '#d13200',
                     'icon' => 'fa fa-cube',
                 ],
                 'data' => [
@@ -51,7 +51,7 @@ return [
                 'label' => 'Ends With 1',
                 'priority' => 200,
                 'style' => [
-                    'color' => '#ff0000',
+                    'color' => '#363377',
                     'icon' => 'fa fa-cube',
                 ],
                 'data' => [
@@ -64,7 +64,7 @@ return [
                 'label' => 'Ends With 89',
                 'priority' => 300,
                 'style' => [
-                    'color' => '#ff0000',
+                    'color' => '#a9ca00',
                     'icon' => 'fa fa-cube',
                 ],
                 'data' => [
@@ -77,7 +77,7 @@ return [
                 'label' => 'Avg Link Count',
                 'priority' => 400,
                 'style' => [
-                    'color' => '#ff0000',
+                    'color' => '#d15f00',
                     'icon' => 'fa fa-cube',
                 ],
                 'data' => [

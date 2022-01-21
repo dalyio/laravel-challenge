@@ -4,6 +4,7 @@ namespace Dalyio\Challenge\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,6 +26,7 @@ class ChallengeServiceProvider extends ServiceProvider
         $this->publishes([
             realpath(__DIR__.'/../../database/migrations') => database_path('/migrations'),
             realpath(__DIR__.'/../../resources/assets') => resource_path('/assets'),
+            realpath(__DIR__.'/../../routes/web.php') => base_path('/routes/web.php'),
             realpath(__DIR__.'/../../storage') => storage_path(),
             realpath(__DIR__.'/../../webpack.mix.js') => base_path('/webpack.mix.js'),
             realpath(__DIR__.'/../../package.json') => base_path('/package.json'),
@@ -51,9 +53,19 @@ class ChallengeServiceProvider extends ServiceProvider
     {
         $this->commands([
             \Dalyio\Challenge\Console\Commands\ChallengeInstall::class,
-            \Dalyio\Challenge\Console\Commands\ChallengeNumberchain::class,
-            \Dalyio\Challenge\Console\Commands\ChallengeZipcodes::class,
         ]);
+        
+        if (Schema::hasTable('challenge_numberchains')) {
+            $this->commands([
+                \Dalyio\Challenge\Console\Commands\ChallengeNumberchain::class,
+            ]);
+        }
+        
+        if (Schema::hasTable('challenge_geo_zipcodes')) {
+            $this->commands([
+                \Dalyio\Challenge\Console\Commands\ChallengeZipcodes::class,
+            ]);
+        }
     }
     
     protected function configureRoutes()

@@ -21,14 +21,21 @@ class ZipcodesController extends Controller
     private $zipcodeSearch;
     
     /**
+     * @var \Dalyio\Challenge\Services\CodeblockStub
+     */
+    private $codeblockStub;
+    
+    /**
      * @return void
      */
     public function __construct(
         \Dalyio\Challenge\Services\CalcDistance $calcDistance,
-        \Dalyio\Challenge\Services\ZipcodeSearch $zipcodeSearch
+        \Dalyio\Challenge\Services\ZipcodeSearch $zipcodeSearch,
+        \Dalyio\Challenge\Services\CodeblockStub $codeblockStub
     ) {
         $this->calcDistance = $calcDistance;
         $this->zipcodeSearch = $zipcodeSearch;
+        $this->codeblockStub = $codeblockStub;
     }
     
     /**
@@ -36,7 +43,11 @@ class ZipcodesController extends Controller
      */
     public function solution()
     {
-        return view('app.zipcodes.solution');
+        return view('app.zipcodes.solution', [
+            'codeblock' => function($key) {
+                return $this->codeblockStub->get($key);
+            },
+        ]);
     }
     
     /**

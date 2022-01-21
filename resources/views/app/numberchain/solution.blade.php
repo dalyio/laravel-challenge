@@ -9,33 +9,7 @@
             </div>
             <div>
                 <blockquote>
-                  <pre>
-                    <code>{{"
-public function numberChain(\$number)
-{
-    \$chain = [\$number];
-    \$numberChain = function(\$number) use(&\$chain, &\$numberChain) {
-
-        // Split into digits and get the sum of square of digits
-        \$newNumber = array_sum(array_map(function(\$digit) {
-            return pow(\$digit, 2);
-        }, str_split(\$number)));
-
-        \$chain[] = \$newNumber;
-
-        // Break if number is either 1 or 89
-        if ((\$newNumber === 1) || (\$newNumber === 89)) {
-            return \$chain;
-        }
-
-        // Calculate next number in number chain
-        return \$numberChain(\$newNumber);
-    };
-
-    return \$numberChain(\$number);
-}
-                    "}}</code>
-                  </pre>
+                    <pre><code>{{ $codeblock('sum-square-digits') }}</code></pre>
                 </blockquote>  
             </div>
             <div id="test-numberchain-component">
@@ -50,36 +24,7 @@ public function numberChain(\$number)
             </div>
             <div class="codeblock">
                 <blockquote>
-                  <pre>
-                    <code>{{"
-public function arrivesAt(\$limit, \$arrivalNumber = 89)
-{
-    \$result = 0;
-    for (\$n = 1; \$n <= \$limit; \$n++) {
-
-        \$arrivesAt = function(\$number) use(&\$arrivesAt) {
-
-            // Split into digits and get the sum of square of digits
-            \$newNumber = array_sum(array_map(function(\$digit) {
-                return pow(\$digit, 2);
-            }, str_split(\$number)));
-
-            // Break if number is either 1 or 89
-            if ((\$newNumber === 1) || (\$newNumber === 89)) {
-                return \$newNumber;
-            }
-
-            // Calculate next number in number chain
-            return \$arrivesAt(\$newNumber);
-        };
-
-        if (\$arrivesAt(\$n) == \$arrivalNumber) \$result++;
-    }
-
-    return \$result;
-}
-                    "}}</code>
-                  </pre>
+                    <pre><code>{{ $codeblock('how-many-arrive') }}</code></pre>
                 </blockquote>  
             </div>
             <div>

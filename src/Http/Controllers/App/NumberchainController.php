@@ -15,12 +15,19 @@ class NumberchainController extends Controller
     private $squareOfDigits;
     
     /**
+     * @var \Dalyio\Challenge\Services\CodeblockStub
+     */
+    private $codeblockStub;
+    
+    /**
      * @return void
      */
     public function __construct(
-        \Dalyio\Challenge\Services\SquareOfDigits $squareOfDigits
+        \Dalyio\Challenge\Services\SquareOfDigits $squareOfDigits,
+        \Dalyio\Challenge\Services\CodeblockStub $codeblockStub
     ) {
         $this->squareOfDigits = $squareOfDigits;
+        $this->codeblockStub = $codeblockStub;
     }
     
     /**
@@ -28,7 +35,11 @@ class NumberchainController extends Controller
      */
     public function solution()
     {
-        return view('app.numberchain.solution');
+        return view('app.numberchain.solution', [
+            'codeblock' => function($key) {
+                return $this->codeblockStub->get($key);
+            },
+        ]);
     }
     
     /**
