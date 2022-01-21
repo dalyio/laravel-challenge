@@ -26,7 +26,6 @@ mix.combine([
 
 mix.combine([
     'node_modules/bootstrap/dist/css/bootstrap.css',
-    'node_modules/bootstrap-select/dist/css/bootstrap-select.css',
     'node_modules/font-awesome/css/font-awesome.css',
     'node_modules/daterangepicker/daterangepicker.css',
     'node_modules/highcharts/css/highcharts.css'

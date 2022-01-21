@@ -226,16 +226,19 @@
         zipcodeDistanceApiVue.component('zipcode-distance-api-component', {
             template: `
             
+                <div v-if="message" class="d-flex flex-column mt-3">
+                    <div class="message alert alert-danger" role="alert">
+                        <span v-text="message"></span>
+                    </div>
+                </div>
                 <div class="form-group mb-0">
                     <textarea id="zipcode-api-input" class="form-control" rows="10" v-model="input"></textarea>
-                </div>
-                                
+                </div>         
                 <div class="d-flex flex-row mt-3">                        
                     <div>
                         <btn id="zipcode-api-btn" class="btn btn-admin" v-on:click="calculateDistance">{{ __('Submit') }}<btn>
                     </div>
-                </div>  
-                                  
+                </div>            
                 <div v-if="distances.length" class="mt-3">
                     <table class="table table-widget">
                         <thead>
@@ -254,8 +257,7 @@
                             </tr>
                         </tbody>
                     </table>       
-                </div>
-                                 
+                </div>         
                 <div v-if="awaiting" class="font-sm font-italic">
                     <span>{{ __('calculating') }}</span>
                     <span v-text="awaitingElipsis"></span>
