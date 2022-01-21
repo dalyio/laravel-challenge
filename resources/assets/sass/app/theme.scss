@@ -444,7 +444,6 @@ select:active, select:hover {
     gap: 1rem;
     
     .card-title {
-        font-size: 1.4rem;
         line-height: 1;
         text-transform: uppercase;
     }
@@ -507,7 +506,6 @@ select:active, select:hover {
         
         .chart-label {
             font-family: Verdana, sans-serif;
-            font-size: 1.4rem;
             text-transform: uppercase;
         }
         
@@ -696,4 +694,9 @@ select:active, select:hover {
     td {
         border-top: none;
     }
+}
+
+.codeblock {
+    background-color: #f7f7f7;
+    padding: 1rem;
 }

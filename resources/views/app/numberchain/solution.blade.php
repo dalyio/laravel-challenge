@@ -5,10 +5,10 @@
     <div class="card card-widget" style="width: calc(50% - 1rem)">
         <div class="card-body">
             <div class="card-title">
-                <span>{{ __('Number Chains - Sum of Square of Digits') }}</span>
+                <span class="font-xl">{{ __('Number Chains - Sum of Square of Digits') }}</span>
             </div>
             <div>
-                <blockquote>
+                <blockquote class="codeblock">
                     <pre><code>{{ $codeblock('sum-square-digits') }}</code></pre>
                 </blockquote>  
             </div>
@@ -20,10 +20,10 @@
     <div class="card card-widget" style="width: 50%">
         <div class="card-body">
             <div class="card-title">
-                <span>{{ __('How Many Arrive At 89?') }}</span>
+                <span class="font-xl">{{ __('How Many Arrive At 89?') }}</span>
             </div>
-            <div class="codeblock">
-                <blockquote>
+            <div>
+                <blockquote class="codeblock">
                     <pre><code>{{ $codeblock('how-many-arrive') }}</code></pre>
                 </blockquote>  
             </div>

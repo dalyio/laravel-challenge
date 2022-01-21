@@ -3,7 +3,7 @@
         <div class="d-flex justify-content-between">
             <div>
                 <div class="card-title">
-                    <span>{{ $label }}</span>
+                    <span class="font-xl">{{ $label }}</span>
                 </div>
                 <div class="card-data">
                     <span>{{ $data }}</span>

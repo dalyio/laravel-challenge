@@ -1,7 +1,7 @@
 <div class="card card-widget-grid" style="width: {{ $width }}">
     <div class="card-body">
         <div class="card-title">
-            <span>{{ $label }}</span>
+            <span class="font-xl"">{{ $label }}</span>
         </div>
         <table class="table table-widget">
             <thead>

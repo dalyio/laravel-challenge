@@ -6,7 +6,7 @@
     <div class="card card-widget card-codeblock" style="width: 100%">
         <div class="card-body">
             <div class="card-title">
-                <span>{{ __('Haversine Formula') }}</span>
+                <span class="font-xl">{{ __('Haversine Formula') }}</span>
             </div>
             <div>
                 <blockquote>
@@ -19,7 +19,7 @@
     <div class="card card-widget" style="width: calc(50% - .5rem)">
         <div class="card-body">
             <div class="card-title">
-                <span>{{ __('Distance By Zipcodes') }}</span>
+                <span class="font-xl">{{ __('Distance By Zipcodes') }}</span>
             </div>
             <div id="zipcode-distance-component">
                 <zipcode-distance-component></zipcode-distance-component>
@@ -30,7 +30,7 @@
     <div class="card card-widget" style="width: calc(50% - .5rem)">
         <div class="card-body">
             <div class="card-title">
-                <span>{{ __('Test The API') }}</span>
+                <span class="font-xl">{{ __('Test The API') }}</span>
             </div>
             <div id="zipcode-distance-api-component">
                 <zipcode-distance-api-component></zipcode-distance-api-component>

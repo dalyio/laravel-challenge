@@ -13,7 +13,7 @@
             },
 
             title: {
-                text: '<span class="chart-label">{{ $label }}</span>',
+                text: '<span class="chart-label font-xl"">{{ $label }}</span>',
                 useHhtml: true
             },
                     
@@ -36,7 +36,7 @@
             },
                     
             tooltip: {
-                headerFormat: '<b>{point.name}</b><br/>',
+                headerFormat: '<b>{point.x}</b><br/>',
                 pointFormat: 'Total: {point.y}'
             },
             

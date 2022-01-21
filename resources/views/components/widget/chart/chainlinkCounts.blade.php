@@ -14,7 +14,7 @@
             },
 
             title: {
-                text: '<span class="chart-label">{{ $label }}</span>',
+                text: '<span class="chart-label font-xl"">{{ $label }}</span>',
                 useHhtml: true
             },
                     
